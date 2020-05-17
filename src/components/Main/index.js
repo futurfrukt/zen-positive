@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback, useEffect, useContext } from 'react';
 import { getRandomInt } from '../../utils';
 import './index.css';
 import '../../styles/animations.css';
@@ -9,6 +9,9 @@ import {
 } from './constants';
 import { Sym } from './Sym';
 import { Controls } from './Controls';
+import { Top } from './Top';
+import cls from "classnames";
+import { ControlsContext } from '../App';
 
 export const Main = () => {
   const [lines, setLines] = useState([ ...LINES ]);
@@ -40,8 +43,11 @@ export const Main = () => {
     }
   }, [line, setLine, nextLine]);
 
+  const { visible: barVisible } = useContext(ControlsContext);
   return <div className={'main'}>
-    <div className={'head'}>{''}</div>
+    <Top
+      className={cls('main__bar', { 'main__bar_hidden': !barVisible })}
+    />
     <div className={'lines'}>
       <code className={'line'}>
         { line.split('').map((s, i) => (<Sym
@@ -51,6 +57,10 @@ export const Main = () => {
         >{s}</Sym>)) }
       </code>
     </div>
-    <Controls onReload={startReloadText} isReloading={isReloading} />
+    <Controls
+      className={cls('main__bar', { 'main__bar_hidden': !barVisible })}
+      onReload={startReloadText}
+      isReloading={isReloading}
+    />
   </div>;
 }

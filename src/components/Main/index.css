@@ -1,3 +1,8 @@
+:root {
+    --show-delay: 0.4s;
+    --hide-delay: 1s;
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -5,10 +10,23 @@
     justify-content: space-evenly;
 }
 
+.main__bar {
+    height: 50px;
+    opacity: 1;
+    transition: opacity var(--show-delay);
+}
+
+.main__bar_hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--hide-delay);
+}
+
 .lines {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: calc(20px + 2vmin);
 }
 
 .line {

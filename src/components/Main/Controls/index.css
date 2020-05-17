@@ -1,28 +1,19 @@
 .controls {
-    margin: 24px;
     align-items: center;
     display: flex;
     justify-content: center;
-    opacity: 1;
-    transition: opacity 0.4s;
-}
-
-.controls_hidden {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 1s;
 }
 
 .controls button {
     min-width: 100px;
-    font-size: 14px;
+    font-size: calc(10px + 1vmin);
     color: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
     border: 1px solid currentColor;
     background: none;
     padding: 8px 16px;
     margin: 0 4px;
-    transition: color 1s;
+    transition: color var(--hide-delay);
     user-select: none;
 }
 
