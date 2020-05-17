@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/zen-positive/static/css/main.241da543.chunk.css",
+    "main.js": "/zen-positive/static/js/main.44ec2429.chunk.js",
+    "main.js.map": "/zen-positive/static/js/main.44ec2429.chunk.js.map",
+    "runtime-main.js": "/zen-positive/static/js/runtime-main.107a1ded.js",
+    "runtime-main.js.map": "/zen-positive/static/js/runtime-main.107a1ded.js.map",
+    "static/js/2.74249cde.chunk.js": "/zen-positive/static/js/2.74249cde.chunk.js",
+    "static/js/2.74249cde.chunk.js.map": "/zen-positive/static/js/2.74249cde.chunk.js.map",
+    "index.html": "/zen-positive/index.html",
+    "precache-manifest.0c9df384a12b5fb194c55042b10096e0.js": "/zen-positive/precache-manifest.0c9df384a12b5fb194c55042b10096e0.js",
+    "service-worker.js": "/zen-positive/service-worker.js",
+    "static/css/main.241da543.chunk.css.map": "/zen-positive/static/css/main.241da543.chunk.css.map",
+    "static/js/2.74249cde.chunk.js.LICENSE.txt": "/zen-positive/static/js/2.74249cde.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.107a1ded.js",
+    "static/js/2.74249cde.chunk.js",
+    "static/css/main.241da543.chunk.css",
+    "static/js/main.44ec2429.chunk.js"
+  ]
+}
