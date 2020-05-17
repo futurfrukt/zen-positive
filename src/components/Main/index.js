@@ -17,7 +17,6 @@ export const Main = () => {
   const [lines, setLines] = useState([ ...LINES ]);
   const [line, setLine] = useState(INITIAL_LINE);
   const [nextLine, setNextLine] = useState(line);
-  const [phase, setPhase] = useState(false);
   const isReloading = line !== nextLine;
 
   const startReloadText = useCallback(() => {
@@ -27,7 +26,7 @@ export const Main = () => {
     const nextLines = (lines.length > 1 ? lines : LINES).filter(l => l !== line);
     setLines(nextLines);
     setNextLine(nextLines[getRandomInt(nextLines.length)]);
-  }, [lines, setLines, line, phase, setPhase, nextLine, setNextLine]);
+  }, [lines, setLines, line, nextLine, setNextLine]);
 
   useEffect(() => {
     const reloadTimer = setTimeout(startReloadText, RELOAD_DELAY);
@@ -51,7 +50,7 @@ export const Main = () => {
     <div className={'lines'}>
       <code className={'line'}>
         { line.split('').map((s, i) => (<Sym
-          key={`${i}-${s}-${phase}`}
+          key={`${i}-${s}`}
           index={i}
           onAnimationIteration={onAnimationIteration}
         >{s}</Sym>)) }
