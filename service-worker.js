@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/zen-positive/precache-manifest.fdc0b48d28620e71fb5398901238cb92.js"
+  "/zen-positive/precache-manifest.584e35fe0811add8f9b6556c7153a94b.js"
 );
 
 self.addEventListener('message', (event) => {
