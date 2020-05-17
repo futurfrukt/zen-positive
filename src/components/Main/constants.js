@@ -27,5 +27,5 @@ export const LINES = phrases.reduce((acc, str) => {
 
 export const INITIAL_LINE = LINES[getRandomInt(LINES.length)];
 export const RELOAD_DELAY = 10000;
-export const ANIMATION_MAX_TIME = 8000;
+export const ANIMATION_MAX_TIME = 6000;
 export const ANIMATION_MIN_TIME = 2000;
