@@ -2,8 +2,12 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   font-size: calc(20px + 2vmin);
   color: white;
+}
+
+.app_noControls {
+  cursor: none;
 }

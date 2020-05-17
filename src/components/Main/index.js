@@ -2,15 +2,15 @@ import React, { useState, useCallback, useEffect } from "react";
 import { getRandomInt } from '../../utils';
 import './index.css';
 import '../../styles/animations.css';
-// import cls from "classnames";
 import {
   INITIAL_LINE,
   LINES,
   RELOAD_DELAY,
 } from './constants';
 import { Sym } from './Sym';
+import { Controls } from './Controls';
 
-export const Lines = () => {
+export const Main = () => {
   const [lines, setLines] = useState([ ...LINES ]);
   const [line, setLine] = useState(INITIAL_LINE);
   const [nextLine, setNextLine] = useState(line);
@@ -41,6 +41,7 @@ export const Lines = () => {
   }, [line, setLine, nextLine]);
 
   return <div className={'main'}>
+    <div className={'head'}>{''}</div>
     <div className={'lines'}>
       <code className={'line'}>
         { line.split('').map((s, i) => (<Sym
@@ -50,8 +51,6 @@ export const Lines = () => {
         >{s}</Sym>)) }
       </code>
     </div>
-    <div className={'controls'}>
-      <button disabled={isReloading} onClick={startReloadText}>next</button>
-    </div>
+    <Controls onReload={startReloadText} isReloading={isReloading} />
   </div>;
 }
