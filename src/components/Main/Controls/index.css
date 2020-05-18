@@ -10,15 +10,20 @@
     color: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
     border: 1px solid currentColor;
-    background: none;
     padding: 8px 16px;
     margin: 0 4px;
-    transition: color var(--hide-delay);
     user-select: none;
+    outline: none;
+    transition: background-color var(--show-delay);
+    background-color: transparent;
 }
 
-.controls button:disabled {
-    color: rgba(255, 255, 255, 0.5);
+.controls button:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+
+.controls button:active {
+    background-color: white;
 }
 
 .controls button span {

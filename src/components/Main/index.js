@@ -29,14 +29,14 @@ export const Main = () => {
 
     const uniqLine = uniqLines[getRandomInt(uniqLines.length)];
     setNextLine(uniqLine);
-  }, [lines, setLines, line, nextLine, setNextLine]);
+  }, [lines, setLines, line, setNextLine, isReloading]);
 
   useEffect(() => {
     const reloadTimer = setTimeout(startReloadText, RELOAD_DELAY);
     return () => {
       clearTimeout(reloadTimer);
     }
-  }, [line]);
+  }, [startReloadText]);
 
   const onAnimationIteration = useCallback((index) => {
     if (line[index] !== nextLine[index]) {

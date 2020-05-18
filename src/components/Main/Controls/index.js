@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import { IS_FULLSCREEN_AVAILABLE } from '../../../utils';
 import cls from "classnames";
 import './index.css';
