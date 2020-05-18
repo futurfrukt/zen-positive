@@ -23,9 +23,12 @@ export const Main = () => {
     if (isReloading) {
       return;
     }
-    const nextLines = (lines.length > 1 ? lines : LINES).filter(l => l !== line);
-    setLines(nextLines);
-    setNextLine(nextLines[getRandomInt(nextLines.length)]);
+
+    const uniqLines = (lines.length > 1 ? lines : LINES).filter(l => l !== line);
+    setLines(uniqLines);
+
+    const uniqLine = uniqLines[getRandomInt(uniqLines.length)];
+    setNextLine(uniqLine);
   }, [lines, setLines, line, nextLine, setNextLine]);
 
   useEffect(() => {
@@ -59,7 +62,6 @@ export const Main = () => {
     <Controls
       className={cls('main__bar', { 'main__bar_hidden': !barVisible })}
       onReload={startReloadText}
-      isReloading={isReloading}
     />
   </div>;
 }

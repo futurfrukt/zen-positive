@@ -1,13 +1,14 @@
 import { getRandomInt } from '../../utils';
+import uniq from 'lodash.uniq';
 
-const phrases = [
+const phrases = uniq([
   'Всё получится',
   'Ты всё успеешь',
   'Ты справишься',
   'Улыбнись себе',
   'Посмотри в окно',
-  'Посмотри в окно',
-];
+  'Всё будет хорошо',
+]);
 let maxLen = phrases.reduce((acc, str) => str.length > acc ? str.length : acc, 0);
 if (maxLen % 2 !== 0) {
   maxLen += 1;

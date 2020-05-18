@@ -11,7 +11,7 @@ const toggleFullscreen = () => {
   }
 };
 
-export const Controls = ({ className, onReload, isReloading }) => {
+export const Controls = ({ className, onReload }) => {
   useEffect(() => {
     const handleKeyDown = ({ code } = {}) => code === 'KeyF' && toggleFullscreen();
     document.addEventListener('keydown', handleKeyDown, { passive: true });
@@ -22,6 +22,6 @@ export const Controls = ({ className, onReload, isReloading }) => {
 
   return <div className={cls('controls', className)}>
     { IS_FULLSCREEN_AVAILABLE && <button onClick={toggleFullscreen}><span>f</span>ullscreen</button> }
-    <button disabled={isReloading} onClick={onReload}>next</button>
+    <button onClick={onReload}>next</button>
   </div>
 };
