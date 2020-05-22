@@ -8,6 +8,7 @@ const phrases = uniq([
   'Улыбнись себе',
   'Посмотри в окно',
   'Всё будет хорошо',
+  'Думай о хорошем',
 ]);
 let maxLen = phrases.reduce((acc, str) => str.length > acc ? str.length : acc, 0);
 if (maxLen % 2 !== 0) {
